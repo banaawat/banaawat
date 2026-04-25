@@ -23,7 +23,7 @@ export default function Hero() {
         </FadeUp>
         <FadeUp delay={200}>
           <p className="text-xl text-ink-muted max-w-2xl mb-12 leading-relaxed">
-            AI-assisted cold email outreach for B2B SaaS in India and GCC. Done for you. Pipeline in 30 days.
+            AI-assisted cold email + LinkedIn outreach for B2B companies. Done for you. Pipeline in 30 days.
           </p>
         </FadeUp>
         <FadeUp delay={300}>

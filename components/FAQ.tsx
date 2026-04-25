@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: 'What markets do you cover?',
-    a: 'India and GCC, English-first.',
+    a: 'We work with B2B companies globally. Primary experience in India, GCC, and Southeast Asia — but our system works across any English-speaking market.',
   },
 ]
 
