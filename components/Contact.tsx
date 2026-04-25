@@ -15,7 +15,6 @@ export default function Contact() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    window.open('https://calendly.com/banaawat/20min', '_blank')
     try {
       await fetch(SHEET_URL, {
         method: 'POST',
@@ -56,11 +55,21 @@ export default function Contact() {
           </FadeUp>
           <FadeUp delay={100}>
             {submitted ? (
-              <div className="bg-brand/8 border border-brand/20 rounded-xl p-10">
-                <p className="font-heading text-2xl font-bold text-ink mb-2">
-                  Got it, {form.name}.
-                </p>
-                <p className="text-ink-muted">We&apos;ll be in touch within 24 hours.</p>
+              <div className="bg-brand/8 border border-brand/20 rounded-xl p-10 space-y-6">
+                <div>
+                  <p className="font-heading text-2xl font-bold text-ink mb-2">
+                    Got it, {form.name}.
+                  </p>
+                  <p className="text-ink-muted">We&apos;ll be in touch within 24 hours.</p>
+                </div>
+                <a
+                  href="https://calendly.com/banaawat/20min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center bg-brand hover:bg-brand/90 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                >
+                  Pick a time on Calendly →
+                </a>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -131,17 +140,6 @@ export default function Contact() {
                 >
                   Book my call →
                 </Button>
-                <p className="text-center text-sm text-ink-muted mt-2">
-                  Or{' '}
-                  <a
-                    href="https://calendly.com/banaawat/20min"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline hover:text-ink transition-colors"
-                  >
-                    pick a time directly on Calendly →
-                  </a>
-                </p>
               </form>
             )}
           </FadeUp>
