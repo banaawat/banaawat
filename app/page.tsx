@@ -4,7 +4,6 @@ import Problem from '@/components/Problem'
 import Process from '@/components/Process'
 import Services from '@/components/Services'
 import HowWeThink from '@/components/HowWeThink'
-import Pricing from '@/components/Pricing'
 import Guarantee from '@/components/Guarantee'
 import FAQ from '@/components/FAQ'
 import Contact from '@/components/Contact'
@@ -20,7 +19,6 @@ export default function Home() {
         <Process />
         <Services />
         <HowWeThink />
-        <Pricing />
         <Guarantee />
         <FAQ />
         <Contact />

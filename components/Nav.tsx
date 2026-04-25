@@ -27,7 +27,6 @@ export default function Nav() {
         <nav className="hidden md:flex items-center gap-8">
           {[
             { label: 'How it works', href: '#process' },
-            { label: 'Pricing', href: '#pricing' },
             { label: 'FAQ', href: '#faq' },
           ].map(({ label, href }) => (
             <a key={href} href={href} className="text-sm text-ink-muted hover:text-ink transition-colors">
@@ -46,7 +45,6 @@ export default function Nav() {
         <div className="md:hidden bg-paper/95 backdrop-blur-md border-t border-ink/10 px-6 py-5 flex flex-col gap-4">
           {[
             { label: 'How it works', href: '#process' },
-            { label: 'Pricing', href: '#pricing' },
             { label: 'FAQ', href: '#faq' },
           ].map(({ label, href }) => (
             <a key={href} href={href} className="text-sm text-ink-muted" onClick={() => setOpen(false)}>
