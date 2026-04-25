@@ -10,7 +10,7 @@ const inputCls =
   'w-full bg-surface border border-ink/15 rounded-lg px-4 py-3 text-ink placeholder:text-ink-muted/50 focus:outline-none focus:ring-2 focus:ring-brand/40 transition-shadow'
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', company: '', role: '', email: '', arr: '' })
+  const [form, setForm] = useState({ name: '', company: '', role: '', email: '', notes: '' })
   const [submitted, setSubmitted] = useState(false)
 
   async function handleSubmit(e: React.FormEvent) {
@@ -26,7 +26,7 @@ export default function Contact() {
           company: form.company,
           role: form.role,
           email: form.email,
-          arr: form.arr,
+          notes: form.notes,
         }),
       })
     } catch (err) {
@@ -37,7 +37,8 @@ export default function Contact() {
   }
 
   function update(field: keyof typeof form) {
-    return (e: React.ChangeEvent<HTMLInputElement>) => setForm({ ...form, [field]: e.target.value })
+    return (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+      setForm({ ...form, [field]: e.target.value })
   }
 
   return (
@@ -112,15 +113,14 @@ export default function Contact() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-ink mb-1.5">
-                    Monthly ARR{' '}
-                    <span className="text-ink-muted font-normal">(optional)</span>
+                    Notes <span className="text-ink-muted font-normal">(optional)</span>
                   </label>
-                  <input
-                    type="text"
-                    value={form.arr}
-                    onChange={update('arr')}
+                  <textarea
+                    rows={3}
+                    value={form.notes}
+                    onChange={update('notes')}
                     className={inputCls}
-                    placeholder="e.g. ₹5L/mo"
+                    placeholder="Anything you want us to know before the call (optional)"
                   />
                 </div>
                 <Button
