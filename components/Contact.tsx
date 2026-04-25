@@ -15,11 +15,12 @@ export default function Contact() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    window.open('https://calendly.com/banaawat/20min', '_blank')
     try {
       await fetch(SHEET_URL, {
         method: 'POST',
         mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'text/plain' },
         body: JSON.stringify({
           timestamp: new Date().toISOString(),
           name: form.name,
@@ -130,6 +131,17 @@ export default function Contact() {
                 >
                   Book my call →
                 </Button>
+                <p className="text-center text-sm text-ink-muted mt-2">
+                  Or{' '}
+                  <a
+                    href="https://calendly.com/banaawat/20min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-ink transition-colors"
+                  >
+                    pick a time directly on Calendly →
+                  </a>
+                </p>
               </form>
             )}
           </FadeUp>
