@@ -4,7 +4,7 @@ import FadeUp from '@/components/FadeUp'
 import { Button } from '@/components/ui/button'
 
 const SHEET_URL =
-  'https://script.google.com/a/macros/banaawat.com/s/AKfycbwPtmeexpkjLNnYZU3DJFTltfdveasffeLcN-hcqBWLvgC6VnwtBqRSNx-dMkAZcX9r/exec'
+  'https://script.google.com/macros/s/AKfycbwPtmeexpkjLNnYZU3DJFTltfdveasffeLcN-hcqBWLvgC6VnwtBqRSNx-dMkAZcX9r/exec'
 
 const inputCls =
   'w-full bg-surface border border-ink/15 rounded-lg px-4 py-3 text-ink placeholder:text-ink-muted/50 focus:outline-none focus:ring-2 focus:ring-brand/40 transition-shadow'
@@ -63,7 +63,7 @@ export default function Contact() {
                   <p className="text-ink-muted">We&apos;ll be in touch within 24 hours.</p>
                 </div>
                 <a
-                  href="https://calendly.com/banaawat/20min"
+                  href="https://calendly.com/vansh-banaawat/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center bg-brand hover:bg-brand/90 text-white font-medium py-3 px-6 rounded-lg transition-colors"
